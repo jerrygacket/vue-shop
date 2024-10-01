@@ -1,7 +1,9 @@
 <template>
   <div class="shop wrapper-content wrapper-content--fixed">
-    <h1>Shop</h1>
-    <productList :productList="productList" />
+    <div class="container">
+      <h1>Shop</h1>
+      <productList :productList="productList" />
+    </div>
   </div>
 </template>
 

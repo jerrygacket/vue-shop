@@ -1,9 +1,6 @@
 <template>
-    <div class="container">
-        <h1>{{ product.title }}</h1>
-        <img :src="product.img" alt="">
-        <p>{{ product.description }}</p>
-    </div>
+    <img :src="product.img" alt="">
+    <h2><router-link :to="'/product/' + product.id">{{ product.title }}</router-link></h2>
 </template>
 
 <script>
