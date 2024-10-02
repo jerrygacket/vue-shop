@@ -20,7 +20,6 @@ export default {
   },
   created () {
     this.product = this.$store.getters.getProductById(this.$route.params.id);
-    console.log(this.product)
   }
 }
 </script>

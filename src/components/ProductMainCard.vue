@@ -3,13 +3,16 @@
         
         <div class="product__wrapper">
         <div class="product-slider">
-            <carousel>
+            <Carousel :items-to-show="1" :wrapAround="true">
+    <Slide v-for="img, index in product.gallery" :key="index">
+        <img :src="img.img" alt="">
+    </Slide>
 
-  <slide v-for="img,index in product.gallery" :key="index">
-    <img :src="img.img" alt="">
-  </slide>
-
-</carousel>
+    <template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+  </Carousel>
             
         </div>
         <div class="product-content">
@@ -21,7 +24,15 @@
 </template>
 
 <script>
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
 export default {
+    components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
   props: {
         product: {
             type: Object,

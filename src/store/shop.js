@@ -94,8 +94,6 @@ export default {
             return state.productList
         },
         getProductById: (state) => (productId) => {
-            console.log(productId);
-            console.log(state.productList);
             return state.productList.find((element) => element.id === +productId)
           }
     },
